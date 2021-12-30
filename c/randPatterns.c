@@ -18,7 +18,7 @@ int main() {
 static int printBoard(int s) {
   
   size = s;
-  for(int i = 1;i < size;i++) {
+  for(int i = 1;i < (size + 1);i++) {
     drawRow(i);
   }
 
