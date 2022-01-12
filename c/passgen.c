@@ -4,7 +4,7 @@
 #include <time.h>
 #include <string.h>
 
-char *generate(int len);
+char *generate(int n);
 char pickRandom(char *str);
 
 int main() {
