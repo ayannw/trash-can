@@ -11,8 +11,14 @@ int main() {
 
   srand(time(NULL));
 
-  printf("%s\n", generate(8));
+  const int len = 32;
+  const char *password = generate(len);
 
+  for(int i = 0;i < len;i++) {
+    printf("%c", password[i]);
+  }
+  
+  printf("\n");
   return 0;
 }
 
@@ -25,7 +31,7 @@ char *generate(int n) {
   char symbols[] = "@#$~_&-+(){}[]^/*:;!?.%";
 
   int randomizer = rand() % 4;
-  char *password = malloc(sizeof(char) * n);
+  char *password = (malloc(sizeof(char) * n));
 
   for(int i = 0;i < n;i++) {
     switch(randomizer) {
@@ -51,6 +57,7 @@ char *generate(int n) {
     }
   }
   
+  //password[n + 1] = '\0';
   return password;
 }
 
